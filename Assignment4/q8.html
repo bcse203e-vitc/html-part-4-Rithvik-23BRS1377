@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Quiz Submission</title>
+</head>
+<body>
+    <h1>Online Quiz Submission</h1>
+    <form action="/submit-quiz" method="post">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required placeholder="example@domain.com"><br><br>
+
+        <h3>Questions:</h3>
+
+        <label>1. What is the capital of France?</label><br>
+        <input type="radio" id="paris" name="question1" value="Paris" required>
+        <label for="paris">Paris</label><br>
+        <input type="radio" id="london" name="question1" value="London">
+        <label for="london">London</label><br>
+        <input type="radio" id="berlin" name="question1" value="Berlin">
+        <label for="berlin">Berlin</label><br><br>
+
+        <label>2. Which of the following are programming languages? (Select all that apply)</label><br>
+        <input type="checkbox" id="python" name="question2[]" value="Python">
+        <label for="python">Python</label><br>
+        <input type="checkbox" id="html" name="question2[]" value="HTML">
+        <label for="html">HTML</label><br>
+        <input type="checkbox" id="css" name="question2[]" value="CSS">
+        <label for="css">CSS</label><br>
+        <input type="checkbox" id="excel" name="question2[]" value="Excel">
+        <label for="excel">Excel</label><br><br>
+
+        <h4>Time Remaining: 10:00 </h4>
+
+        <button type="submit">Submit Quiz</button>
+    </form>
+</body>
+</html>

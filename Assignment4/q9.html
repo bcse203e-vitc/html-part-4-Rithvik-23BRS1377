@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Room Booking Form</title>
+</head>
+<body>
+    <h1>Book a Hotel Room</h1>
+    <form action="/submit-booking" method="post">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="contact-info">Contact Info:</label><br>
+        <input type="text" id="contact-info" name="contact-info" required placeholder="Email or Phone"><br><br>
+
+        <label for="check-in-date">Check-in Date:</label><br>
+        <input type="date" id="check-in-date" name="check-in-date" required><br><br>
+
+        <label for="check-out-date">Check-out Date:</label><br>
+        <input type="date" id="check-out-date" name="check-out-date" required><br><br>
+
+        <label for="number-of-guests">Number of Guests:</label><br>
+        <input type="number" id="number-of-guests" name="number-of-guests" min="1" value="1" required><br><br>
+
+        <label for="room-type">Room Type:</label><br>
+        <select id="room-type" name="room-type" required>
+            <option value="">Select Room Type</option>
+            <option value="Single">Single</option>
+            <option value="Double">Double</option>
+            <option value="Suite">Suite</option>
+        </select><br><br>
+
+        <label>Additional Services:</label><br>
+        <input type="checkbox" id="breakfast" name="services[]" value="Breakfast">
+        <label for="breakfast">Breakfast</label><br>
+        <input type="checkbox" id="airport-pickup" name="services[]" value="Airport Pickup">
+        <label for="airport-pickup">Airport Pickup</label><br><br>
+
+        Total Cost: <br><br>
+
+        <button type="submit">Book Room</button>
+    </form>
+</body>
+</html>
